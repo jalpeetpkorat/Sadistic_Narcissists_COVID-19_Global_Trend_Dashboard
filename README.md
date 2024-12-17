@@ -19,14 +19,6 @@ The **COVID-19 Global Dashboard** is an interactive web application built using 
 
 ---
 
-## Features
-- **Interactive Dropdowns**: Choose countries and types of data (Confirmed Cases, Deaths, and People Vaccinated).
-- **Choropleth Map**: Global COVID-19 data represented geographically.
-- **Time-Series Graph**: Country-specific trend view for the selected countries.
-- **Responsive Design**: Friendly and optimized interface for all devices.
-
----
-
 ## Datasets
 This project makes use of the public datasets related to confirmed cases, deaths, and vaccinations:
 
@@ -36,7 +28,7 @@ This project makes use of the public datasets related to confirmed cases, deaths
 
 2.  **COVID-19 Deaths**
     - Source: [Johns Hopkins CSSE COVID-19 Dataset](https://github.com/CSSEGISandData/COVID-19/blob/master/csse_covid_19_data/csse_covid_19_time_series/time_series_covid19_deaths_global.csv)
-- File Path: `data/time_series_covid19_deaths_global.csv`
+    - File Path: `data/time_series_covid19_deaths_global.csv`
 
 3. **COVID-19 Vaccinations**
    - Source: [Our World in Data Vaccination Dataset](https://raw.githubusercontent.com/owid/covid-19-data/master/public/data/vaccinations/vaccinations.csv)
@@ -52,17 +44,14 @@ The project is structured under the following key files:
 
 2. **data_processing.py**
    - Loads and processes the datasets.
-- Formats and cleans data for use in the dashboard.
+   - Formats and cleans data for use in the dashboard.
 
 3. **callbacks.py**
    - Defines the callback logic to dynamically update graphs based on user input.
 
 4. **visualizations.py**
    - Defines the user interface layout using Dash components.
-
-5. **data/**
-   - Contains the source data files for confirmed cases, deaths, and vaccinations.
-
+     
 ---
 
 ## How to Run the Project
@@ -96,7 +85,15 @@ Download the datasets and put them in the `data/` directory:
 
 ---
 
-## Dependencies
+## Summary of Results
+- **Interactive Dropdowns**: Choose countries and types of data (Confirmed Cases, Deaths, and People Vaccinated).
+- **Choropleth Map**: Global COVID-19 data represented geographically.
+- **Time-Series Graph**: Country-specific trend view for the selected countries.
+- **Responsive Design**: Friendly and optimized interface for all devices.
+
+---
+
+## Libraries
 - Python 3.7+
 - Dash
 - Plotly
@@ -105,5 +102,6 @@ Download the datasets and put them in the `data/` directory:
 Install dependencies using:
 ```bash
 pip install dash plotly pandas
+```
 
 Thanks for checking out our COVID-19 Dashboard!
