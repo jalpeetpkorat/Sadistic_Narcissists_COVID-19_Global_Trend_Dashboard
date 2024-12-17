@@ -23,8 +23,8 @@ def load_data():
     )
 
     # Format dates
-    confirmed_data["Date"] = pd.to_datetime(confirmed_data["Date"])
-    deaths_data["Date"] = pd.to_datetime(deaths_data["Date"])
+    confirmed_data["Date"] = pd.to_datetime(confirmed_data["Date"], errors="coerce")
+    deaths_data["Date"] = pd.to_datetime(deaths_data["Date"], errors="coerce")
     vaccination_data["Date"] = pd.to_datetime(vaccination_data["date"], errors="coerce")
 
     # Rename and simplify vaccination data
