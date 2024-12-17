@@ -54,7 +54,7 @@ def layout():
                             options=[
                                 {"label": "Confirmed Cases", "value": "Confirmed Cases"},
                                 {"label": "Deaths", "value": "Deaths"},
-                                {"label": "Vaccinations", "value": "total_vaccinations"}
+                                {"label": "Vaccinations", "value": "People Vaccinated"}
                             ],
                             value="Confirmed Cases",
                             placeholder="Select Data Type",
