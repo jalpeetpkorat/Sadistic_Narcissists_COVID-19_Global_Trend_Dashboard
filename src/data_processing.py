@@ -1,16 +1,16 @@
 import pandas as pd
 
-# URLs for datasets
-URL_CONFIRMED = "https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_time_series/time_series_covid19_confirmed_global.csv"
-URL_DEATHS = "https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_time_series/time_series_covid19_deaths_global.csv"
-URL_VACCINATIONS = "https://raw.githubusercontent.com/owid/covid-19-data/master/public/data/vaccinations/vaccinations.csv"
+# Datasets
+confirmed_cases = "data/time_series_covid19_confirmed_global.csv"
+deaths = "data/time_series_covid19_deaths_global.csv"
+vaccinations = "data/vaccinations.csv"
 
 # Load data
 def load_data():
     # Load datasets
-    confirmed_data = pd.read_csv(URL_CONFIRMED)
-    deaths_data = pd.read_csv(URL_DEATHS)
-    vaccination_data = pd.read_csv(URL_VACCINATIONS)
+    confirmed_data = pd.read_csv(confirmed_cases)
+    deaths_data = pd.read_csv(deaths)
+    vaccination_data = pd.read_csv(vaccinations)
 
     # Melt confirmed and deaths data
     confirmed_data = confirmed_data.melt(
@@ -28,8 +28,8 @@ def load_data():
     vaccination_data["Date"] = pd.to_datetime(vaccination_data["date"], errors="coerce")
 
     # Rename and simplify vaccination data
-    vaccination_data = vaccination_data[["location", "Date", "total_vaccinations"]]
-    vaccination_data.rename(columns={"location": "Country"}, inplace=True)
+    vaccination_data = vaccination_data[["location", "Date", "people_vaccinated"]]
+    vaccination_data.rename(columns={"location": "Country", "people_vaccinated": "People Vaccinated"}, inplace=True)
 
     return confirmed_data, deaths_data, vaccination_data
 
@@ -37,7 +37,7 @@ def load_data():
 def get_country_summary(confirmed, deaths, vaccinations):
     confirmed_summary = confirmed.groupby("Country/Region")["Confirmed Cases"].max().reset_index()
     deaths_summary = deaths.groupby("Country/Region")["Deaths"].max().reset_index()
-    vaccinations_summary = vaccinations.groupby("Country")["total_vaccinations"].max().reset_index()
+    vaccinations_summary = vaccinations.groupby("Country")["People Vaccinated"].max().reset_index()
 
     # Merge data
     confirmed_summary.rename(columns={"Country/Region": "Country"}, inplace=True)
@@ -45,6 +45,6 @@ def get_country_summary(confirmed, deaths, vaccinations):
 
     country_data = confirmed_summary.merge(deaths_summary, on="Country", how="left")
     country_data = country_data.merge(vaccinations_summary, on="Country", how="left")
-    country_data["total_vaccinations"].fillna(0, inplace=True)
+    country_data["People Vaccinated"].fillna(0, inplace=True)
 
     return country_data
