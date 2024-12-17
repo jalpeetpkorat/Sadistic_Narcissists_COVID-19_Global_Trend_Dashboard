@@ -69,8 +69,6 @@ The project is structured under the following key files:
 ---
 
 ## How to Run the Project
-Steps to Set up and Run the Project on Your Local Machine
-=====================================
 
 1. **Clone the Repository**
     ```bash
@@ -107,7 +105,7 @@ Download the datasets and put them in the `data/` directory:
 
 ---
 
-# Challenges Faced
+## Challenges Faced
 
 1. **Trouble Loading Vaccination Data**
 - Issue: Error occurred after selecting "Vaccinations" from the dropdown.
