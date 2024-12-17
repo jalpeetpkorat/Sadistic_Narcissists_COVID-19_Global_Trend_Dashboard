@@ -39,7 +39,7 @@ def register_callbacks(app):
 
         # Time-series graph
         try:
-            if selected_data == "total_vaccinations":
+            if selected_data == "People Vaccinated":
                 ts_data = vaccination_data[vaccination_data["Country"] == selected_country]
             elif selected_data == "Confirmed Cases":
                 ts_data = confirmed_data[confirmed_data["Country/Region"] == selected_country]
