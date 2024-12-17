@@ -76,7 +76,7 @@ The project is structured under the following key files:
     cd <project-directory>
     ```
 
-2. *Install Dependencies**
+2. **Install Dependencies**
     Make sure you have Python installed. Use `pip` to install necessary packages:
     ```bash
     pip install -r requirements.txt
