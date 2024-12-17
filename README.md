@@ -1,5 +1,19 @@
 # COVID-19 Global Dashboard
 
+## Team Members
+| Name             | Role                  |
+|------------------|-----------------------|
+| **Jalpeet Korat (KU2407U317)**     | Team Lead / Developer |
+| **Dhruv Hirpara (KU2407U**     | Data Processing Lead  |
+| **Jay Patel (KU2407U**     | Visualization Expert  |
+| **Smeet Goswami (KU2407U** | Testing / QA          |
+| **Pavan Savani (KU2407U**     | Documentation Lead    |
+
+---
+
+## Objevtive
+Analyze and visualize COVID-19 case trends and vaccination data by country.
+
 ## Project Description
 The **COVID-19 Global Dashboard** is an interactive web application built using **Dash** and **Plotly** to visualize global trends in COVID-19 confirmed cases, deaths, and vaccinations. Users can explore data at a global and country-specific level through clear insights by interactive choropleth maps and time-series visualizations.
 
@@ -29,6 +43,7 @@ This project makes use of the public datasets related to confirmed cases, deaths
    - File Path: `data/vaccinations.csv`
 
 ---
+
 ## File Structure
 The project is structured under the following key files:
 1. **app.py**
@@ -90,35 +105,5 @@ Download the datasets and put them in the `data/` directory:
 Install dependencies using:
 ```bash
 pip install dash plotly pandas
-```
-
----
-
-## Team Members
-| Name             | Role                  |
-|------------------|-----------------------|
-| **Jalpeet Korat**     | Team Lead / Developer |
-| **Dhruv Hirpara**     | Data Processing Lead  |
-| **Jay Patel**     | Visualization Expert  |
-| **Smeet Goswami** | Testing / QA          |
-| **Pavan Savani**     | Documentation Lead    |
-
----
-## License
-MIT License
-
----
-## Acknowledgments
-- Johns Hopkins University CSSE for COVID-19 cases and deaths data.
-- Our World in Data for vaccination data.
-
----
-
-## Screenshots
-Screen shots of the dashboard
-- **Global Choropleth Map**
-- **Time-Series Graph**
-
----
 
 Thanks for checking out our COVID-19 Dashboard!
