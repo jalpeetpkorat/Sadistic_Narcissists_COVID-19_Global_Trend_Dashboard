@@ -11,11 +11,25 @@
 
 ---
 
-## Objevtive
+## Objective
 Analyze and visualize COVID-19 case trends and vaccination data by country.
+
+---
 
 ## Project Description
 The **COVID-19 Global Dashboard** is an interactive web application built using **Dash** and **Plotly** to visualize global trends in COVID-19 confirmed cases, deaths, and vaccinations. Users can explore data at a global and country-specific level through clear insights by interactive choropleth maps and time-series visualizations.
+
+---
+
+## Libraries
+- Dash
+- Plotly
+- Pandas
+ 
+Install dependencies using:
+```bash
+pip install dash plotly pandas
+```
 
 ---
 
@@ -58,19 +72,19 @@ The project is structured under the following key files:
 Steps to Set up and Run the Project on Your Local Machine
 =====================================
 
-1.  Clone the Repository
+1. **Clone the Repository**
     ```bash
     git clone <repository-url>
     cd <project-directory>
     ```
 
-2.  Install Dependencies
+2. *Install Dependencies**
     Make sure you have Python installed. Use `pip` to install necessary packages:
     ```bash
     pip install -r requirements.txt
     ```
 
-3.  Place the Datasets
+3. **Place the Datasets**
 Download the datasets and put them in the `data/` directory:
    - [Confirmed Cases](https://github.com/CSSEGISandData/COVID-19/blob/master/csse_covid_19_data/csse_covid_19_time_series/time_series_covid19_confirmed_global.csv)
    - [Deaths](https://github.com/CSSEGISandData/COVID-19/blob/master/csse_covid_19_data/csse_covid_19_time_series/time_series_covid19_deaths_global.csv)
@@ -93,15 +107,18 @@ Download the datasets and put them in the `data/` directory:
 
 ---
 
-## Libraries
-- Python 3.7+
-- Dash
-- Plotly
-- Pandas
+# Challenges Faced
 
-Install dependencies using:
-```bash
-pip install dash plotly pandas
-```
+1. **Trouble Loading Vaccination Data**
+- Issue: Error occurred after selecting "Vaccinations" from the dropdown.
+- Cause: Data format mismatch and missing values.
+- Fix: Standardized data structure and handled null values during preprocessing.
+
+2. Map Colors Not Appearing
+- Issue: Map displayed only outlines without colors.
+- Cause: Incorrect data mapping and missing region values.
+- Fix: Ensured proper key mapping, handled null data, and verified the color scale configuration.
+
+---
 
 Thanks for checking out our COVID-19 Dashboard!
