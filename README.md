@@ -4,10 +4,10 @@
 | Name             | Role                  |
 |------------------|-----------------------|
 | **Jalpeet Korat (KU2407U317)**     | Team Lead / Developer |
-| **Dhruv Hirpara (KU2407U**     | Data Processing Lead  |
-| **Jay Patel (KU2407U**     | Visualization Expert  |
-| **Smeet Goswami (KU2407U** | Testing          |
-| **Pavan Savani (KU2407U**     | Presentation Lead    |
+| **Dhruv Hirpara (KU2407U294)**     | Data Processing Lead  |
+| **Jay Patel (KU2407U302)**     | Visualization Expert  |
+| **Smeet Goswami (KU2407U379)** | Testing          |
+| **Pavan Savani (KU2407U368)**     | Presentation Lead    |
 
 ---
 
